@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TheGreatList.Views.EditCategory"
+             Title="EditCategory">
+    <VerticalStackLayout Padding="12" HorizontalOptions="FillAndExpand">
+        <Entry Text="{Binding CategoryName}"
+               Placeholder="Category Name"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="Center">
+        </Entry>
+        <Entry Text="{Binding CategoryDescription}"
+               Placeholder="Category Description"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="Center">
+        </Entry>
+        <BoxView HeightRequest="24"
+                 VerticalOptions="FillAndExpand"
+                 BackgroundColor="White"
+                 Color="White">
+        </BoxView>
+        <Button Text="Save"
+                Command="{Binding Save}"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="End">
+        </Button>
+        <BoxView HeightRequest="24" Color="White"></BoxView>
+        <Button Text="Delete"
+                IsVisible="{Binding Deletable}"
+                Command="{Binding Delete}"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="End">
+        </Button>
+    </VerticalStackLayout>
+</ContentPage>

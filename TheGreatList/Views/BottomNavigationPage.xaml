@@ -1,0 +1,22 @@
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:android="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            xmlns:local="clr-namespace:TheGreatList.Views"
+            x:Class="TheGreatList.Views.BottomNavigationPage">
+    <NavigationPage Title="Overview" IconImageSource="list.png">
+        <x:Arguments>
+            <local:OverviewPage Title="Overview" />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Create Task" IconImageSource="check.png">
+        <x:Arguments>
+            <local:EditTask Title="Create Task" />
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Categories" IconImageSource="category.png">
+        <x:Arguments>
+            <local:CategoriesPage Title="Categories" />
+        </x:Arguments>
+    </NavigationPage>
+</TabbedPage>

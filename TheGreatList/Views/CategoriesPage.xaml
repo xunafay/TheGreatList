@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TheGreatList.Views.CategoriesPage"
+             Title="Categories"
+             xmlns:local="clr-namespace:TheGreatList.Views">
+    <VerticalStackLayout Padding="12" HorizontalOptions="FillAndExpand">
+        <RefreshView IsRefreshing="{Binding Refreshing}"
+                     Command="{Binding StartRefresh}"
+                     HorizontalOptions="FillAndExpand">
+            <CollectionView ItemsSource="{Binding CategoriesList}"
+                            SelectionMode="Single"
+                            SelectedItem="{Binding SelectedCategory}"
+                            SelectionChangedCommand="{Binding SelectionChanged}"
+                            HorizontalOptions="FillAndExpand">
+                <CollectionView.EmptyView>
+                    <StackLayout Padding="48">
+                        <Label Text="No categories, create one!"
+                               FontSize="Large"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center">
+                        </Label>
+                        <BoxView HeightRequest="12" Color="White"></BoxView>
+                        <Button Text="Add Category"
+                            Command="{Binding AddCategory}"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="End"></Button>
+                    </StackLayout>
+                </CollectionView.EmptyView>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <local:CategoryCard></local:CategoryCard>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+                <CollectionView.Footer>
+                    <Button Text="Add Category"
+                            Command="{Binding AddCategory}"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="End"></Button>
+                </CollectionView.Footer>
+            </CollectionView>
+        </RefreshView>
+    </VerticalStackLayout>
+</ContentPage>

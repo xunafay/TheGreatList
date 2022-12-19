@@ -1,4 +1,7 @@
-﻿namespace TheGreatList;
+﻿using TheGreatList.Services;
+using TheGreatList.Views;
+
+namespace TheGreatList;
 
 public partial class App : Application
 {
@@ -6,6 +9,7 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-		MainPage = new AppShell();
+		DependencyService.Register<ApiAdapter>();
+		MainPage = new NavigationPage(new BottomNavigationPage());
 	}
 }

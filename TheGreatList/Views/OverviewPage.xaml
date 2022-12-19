@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TheGreatList.Views.OverviewPage"
+             Title="OverviewPage"
+             xmlns:local="clr-namespace:TheGreatList.Views">
+    <RefreshView IsRefreshing="{Binding Refreshing}"
+                 Command="{Binding StartRefresh}">
+        <CollectionView ItemsSource="{Binding TasksList}"
+                        SelectionMode="Single"
+                        SelectedItem="{Binding SelectedTask}"
+                        SelectionChangedCommand="{Binding SelectionChanged}">
+            <CollectionView.EmptyView>
+                <StackLayout Padding="48">
+                    <Label Text="No Tasks Left!"
+                           FontSize="Large"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center">
+                    </Label>
+                </StackLayout>
+            </CollectionView.EmptyView>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <local:TaskCard></local:TaskCard>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </RefreshView>
+</ContentPage>

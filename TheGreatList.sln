@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheGreatList", "TheGreatLis
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TglApi", "TglApi\TglApi.csproj", "{7758E6D2-5F6A-40C8-A74A-74B64CE26D26}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheGreatTesting", "TheGreatTesting\TheGreatTesting.csproj", "{46D95AAE-7236-4C81-9ABD-D0500F086283}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{7758E6D2-5F6A-40C8-A74A-74B64CE26D26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7758E6D2-5F6A-40C8-A74A-74B64CE26D26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7758E6D2-5F6A-40C8-A74A-74B64CE26D26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46D95AAE-7236-4C81-9ABD-D0500F086283}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46D95AAE-7236-4C81-9ABD-D0500F086283}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46D95AAE-7236-4C81-9ABD-D0500F086283}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46D95AAE-7236-4C81-9ABD-D0500F086283}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
